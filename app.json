@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "Pomodoro",
+    "slug": "Pomodoro",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#004743"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "bundleIdentifier": "com.avadora.pomodoro",
+      "supportsTablet": true,
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.avadora.pomodoro",
+      "versionCode": 1
+    }
+  }
+}
