@@ -3,7 +3,7 @@
 
 ## Sobre a Técnica de Pomodoro
 
-É m método de gerenciamento de tempo desenvolvido por Francesco Cirillo no final dos anos 1980. Consiste na utilização de um cronômetro para dividir o trabalho em períodos definidos (normalmente de 25 minutos) separados por breves intervalos.
+É um método de gerenciamento de tempo desenvolvido por Francesco Cirillo no final dos anos 1980. Consiste na utilização de um cronômetro para dividir o trabalho em períodos definidos (normalmente de 25 minutos) separados por breves intervalos.
 
 ## Tecs:
 
