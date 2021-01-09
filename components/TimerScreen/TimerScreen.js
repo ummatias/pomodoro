@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { TouchableOpacity, Text } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
@@ -37,6 +37,10 @@ const TimerScreen = ({ type, time }) => {
         setProgress(0)
         setTimerId(timerId + 1)
     }
+
+    useEffect(() => {
+        reset()
+    }, [time])
 
     const Tab = createBottomTabNavigator();
 

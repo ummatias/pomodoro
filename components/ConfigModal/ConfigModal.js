@@ -96,7 +96,7 @@ const ConfigModal = ({ visibility, setVisibility, reset }) => {
                             textColor='#666'
                             borderColor='#888'
                             rounded
-                            onChange={value => {setTimeConfigs(prevState => { return { ...prevState, pomodoro: value*60}}), reset()}} />
+                            onChange={value => {setTimeConfigs(prevState => { return { ...prevState, pomodoro: value*60}})}} />
                     </TimeSetFild>
 
                     <TimeSetFild>
@@ -110,7 +110,7 @@ const ConfigModal = ({ visibility, setVisibility, reset }) => {
                             textColor='#666'
                             borderColor='#888' 
                             rounded
-                            onChange={value =>  {setTimeConfigs(prevState => { return { ...prevState, shortBreak: value*60}}), reset()}} />
+                            onChange={value =>  {setTimeConfigs(prevState => { return { ...prevState, shortBreak: value*60}})}} />
                     </TimeSetFild>
 
                     <TimeSetFild>
@@ -124,7 +124,7 @@ const ConfigModal = ({ visibility, setVisibility, reset }) => {
                             textColor='#666' 
                             borderColor='#888'
                             rounded 
-                            onChange={value =>  {setTimeConfigs(prevState => { return { ...prevState, longBreak: value*60}}), reset()}} />
+                            onChange={value =>  {setTimeConfigs(prevState => { return { ...prevState, longBreak: value*60}})}} />
                     </TimeSetFild>
                 </TimeSetConfig>
 
