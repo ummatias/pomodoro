@@ -1,12 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { Alert, Text } from 'react-native';
-import { AnimatedCircularProgress } from 'react-native-circular-progress';
-import { LinearGradient } from 'expo-linear-gradient';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import CountDown from 'react-native-countdown-component';
+import React from 'react';
 import styled from 'styled-components';
-import { useTheme } from '../../context/ThemeContext';
+import CircularBar from './components/CircularBar/CircularBar';
+import Countdown from './components/Countdown/Countdown';
 
 const TimerWrapper = styled.View`
     flex: 10;
@@ -43,7 +38,7 @@ const Timer = ({
     reset
 }) => {
 
-    const { theme } = useTheme()
+    
 
     const selectMessage = () => {
         if(type === 'pomodoro') return 'You got it! Now go get some rest!'
@@ -57,44 +52,18 @@ const Timer = ({
                     <Title>{type.toUpperCase()}</Title>
                 </TtileWrapper>
                 <TimerMold>
-                    <LinearGradient colors={['#29323c', '#485563']} style={{padding: 20, borderRadius: 400}}>
-                        <AnimatedCircularProgress
-                            size={280}
-                            width={20}
-                            fill={progress}
-                            tintColor={theme}
-                            rotation={1}
-                            backgroundColor='#222'
-                        >
-
-                        {
-                            () => (
-                                <>
-                                    <CountDown
-                                        id={`${type[0]}${timerId.toString()}`}
-                                        until={setedTime}
-                                        timeToShow={['M', 'S']}
-                                        showSeparator={true}
-                                        onFinish={() => Alert.alert('Congratulations', selectMessage() )}
-                                        onPress={() => {
-                                            setTimeRuning(!timeRunning)
-                                        }}
-                                        onChange={() => { setProgress(progress + 100/setedTime)}}
-                                        size={45}
-                                        timeLabels={[]}
-                                        running={timeRunning}
-                                        digitStyle={{backgroundColor: 'transparent'}}
-                                        digitTxtStyle={{color: '#DDD', fontSize: 80}}
-                                        separatorStyle={{color: '#DDD'}}
-                                    />
-                                    <TouchableOpacity onPress={() => reset() }>
-                                        <Icon name='repeat' size={25} color='#DADADA' />
-                                    </TouchableOpacity>
-                                </>
-                            )
-                        }
-                        </AnimatedCircularProgress>
-                    </LinearGradient>
+                    <CircularBar progress={progress}>
+                        <Countdown
+                            reset={reset}
+                            time={setedTime}
+                            timerId={timerId}
+                            type={type}
+                            timeRunning={timeRunning} 
+                            setTimeRuning={setTimeRuning}
+                            progressBar={progress}
+                            setProgressBar={setProgress}
+                        />
+                    </CircularBar>
                 </TimerMold>
             </TimerWrapper>
     )
