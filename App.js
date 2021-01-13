@@ -1,13 +1,13 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import PomodoroScreen from './screens/PomodoroScreen/PomodoroScreen';
-import ShortBreakScreen from './screens/ShortBreakScreen/ShortBreakScreen';
-import LongBreakScreen from './screens/LongBreakScreen/LongBreakScreen';
-import TimeProvider from './context/TimeConfigs';
-import ThemeProvider from './context/ThemeContext';
-import Navigation from './navigation/Navigation';
-import TabMainIcon from './navigation/TabMainIcon';
+import PomodoroScreen from './src/screens/PomodoroScreen';
+import ShortBreakScreen from './src/screens/ShortBreakScreen';
+import LongBreakScreen from './src/screens/LongBreakScreen';
+import TimeProvider from './src/context/TimeConfigs';
+import ThemeProvider from './src/context/ThemeContext';
+import Navigation from './src/navigation';
+import TabMainIcon from './src/navigation/TabMainIcon';
 
 const Tab = createBottomTabNavigator()
 
