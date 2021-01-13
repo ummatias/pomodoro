@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
 import styled from 'styled-components';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { HeaderModal } from 'styled-components';
+import { HeaderModal } from './styles';
 
 const Header = ({ close }) => {
     return(

@@ -1,13 +1,12 @@
 import React from 'react';
 import { Modal } from 'react-native';
-import styled from 'styled-components';
 
 import Header from './components/Header';
 import TimeSection from './components/TimeSection';
 import ThemeSection from './components/ThemeSection';
 import { ModalBackground } from './styles';
 
-const ConfigModal = ({ visibility, setVisibility }) => {
+const ConfigModal = ({ visibility, setVisibility, reset }) => {
 
     return(
 
@@ -18,7 +17,7 @@ const ConfigModal = ({ visibility, setVisibility }) => {
         >
             <ModalBackground>  
                 <Header close={setVisibility}/>
-                <TimeSection />
+                <TimeSection reset={reset} />
                 <ThemeSection />
             </ModalBackground>
         </Modal>

@@ -1,7 +1,7 @@
 import { useTheme } from '../../../../../../context/ThemeContext';
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
-import { ColorBase } from 'styled-components';
+import { ColorBase } from './styles';
 
 
 const ColorOption = ({ color }) => {

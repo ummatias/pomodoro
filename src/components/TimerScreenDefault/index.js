@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -27,10 +27,6 @@ const TimerScreen = ({ type, time }) => {
         setTimerId(timerId + 1)
     }
 
-    useEffect(() => {
-        reset()
-    }, [time])
-
     const Tab = createBottomTabNavigator();
 
     return(
@@ -41,7 +37,6 @@ const TimerScreen = ({ type, time }) => {
                 <ConfigModal 
                     visibility={modalVisibility}
                     setVisibility={setModalVisibility} 
-                    changeTheme={setTheme}
                     reset={reset}
                 />
                 

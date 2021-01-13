@@ -3,7 +3,7 @@ import NumericInput from 'react-native-numeric-input';
 import { useTime } from '../../../../../../context/TimeConfigs';
 import { Container, LabelText } from './styles';
 
-const NumberInput = ({ label, initValue, type }) => {
+const NumberInput = ({ label, initValue, type, reset }) => {
 
     const { setTimeConfigs } = useTime()
 
@@ -11,13 +11,13 @@ const NumberInput = ({ label, initValue, type }) => {
     const handleChange = (value) =>{
         switch (type) {
             case 'pomodoro':
-                return setTimeConfigs((prevState) =>  { return { ...prevState,  pomodoro: value*60 }})
+                return setTimeConfigs((prevState) =>  { return { ...prevState,  pomodoro: value*60 }}, reset())
 
             case 'shortBreak':
-                return setTimeConfigs((prevState) => { return { ...prevState,  shortBreak: value*60 }})
+                return setTimeConfigs((prevState) => { return { ...prevState,  shortBreak: value*60 }}, reset())
 
             case 'longBreak':
-                return setTimeConfigs((prevState) => { return { ...prevState,  longBreak: value*60 } })
+                return setTimeConfigs((prevState) => { return { ...prevState,  longBreak: value*60 } }, reset())
         }
     }
 
