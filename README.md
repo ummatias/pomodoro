@@ -10,7 +10,7 @@
 O APP está sendo desenvolvido em Javascript, utilizando  React Native
 
 
-## [APK - Current Build](https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40ummatias/Pomodoro-936357e1bc474ecbb319cb07653778dc-signed.apk)
+## [APK - Current Build](https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40ummatias/Pomodoro-acf5849e4a1f4b2ca702ebb629b51167-signed.apk)
 
 
 
